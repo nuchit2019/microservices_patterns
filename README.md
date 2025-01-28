@@ -1,6 +1,7 @@
 # Microservices Patterns
  
-![image](https://github.com/user-attachments/assets/a72942d8-1aeb-4e6c-b6c5-29c275d4bb1d)
+![image](https://github.com/user-attachments/assets/3b8ab0e4-bf46-446a-bd70-fa4385cc47c2)
+
 
 
 #
