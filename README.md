@@ -12,14 +12,14 @@ https://microservices.io/patterns/index.html
      - *Decompose by business capability*: แบ่งแอปพลิเคชันตามความสามารถทางธุรกิจ
      - *Decompose by subdomain*: แบ่งตามโดเมนย่อย (ใช้หลัก DDD - Domain Driven Design)
      - *Self-contained Service*: บริการที่สามารถทำงานได้ด้วยตนเองโดยไม่ต้องรอผลจากบริการอื่น
-     - *Service per team*: บริการที่ออกแบบให้ตรงกับโครงสร้างทีม
+     - *`Service per team`*: บริการที่ออกแบบให้ตรงกับโครงสร้างทีม
 
    - **Database Architecture (สถาปัตยกรรมฐานข้อมูล)**
      - *Shared database*: หลายบริการใช้ฐานข้อมูลเดียวกัน
-     - *Database per service*: แต่ละบริการมีฐานข้อมูลของตัวเอง
+     - *`Database per service`*: แต่ละบริการมีฐานข้อมูลของตัวเอง
 
    - **Data Patterns (รูปแบบการจัดการข้อมูล)**
-     - *API Composition*: รวมข้อมูลจากหลายบริการผ่าน API
+     - *`API Composition`*: รวมข้อมูลจากหลายบริการผ่าน API
      - *CQRS (Command Query Responsibility Segregation)*: แยกคำสั่ง (Command) และการอ่านข้อมูล (Query)
 
    - **Maintaining Data Consistency (การรักษาความสอดคล้องของข้อมูล)**
@@ -34,11 +34,10 @@ https://microservices.io/patterns/index.html
    - **Cross-cutting concerns (ความกังวลที่ครอบคลุมทั้งระบบ)**
      - *Microservice Chassis*: เฟรมเวิร์กที่ช่วยบริหารจัดการไมโครเซอร์วิส
      - *Externalized configuration*: แยกการตั้งค่าระบบออกจากโค้ด
-     - *Service Template*: โครงสร้างมาตรฐานสำหรับบริการ
-     - *Access Token*: การรักษาความปลอดภัยด้วยโทเค็น
+     - *Service Template*: โครงสร้างมาตรฐานสำหรับบริการ 
 
    - **Security (ความปลอดภัย)**
-     - *Access Token*: ใช้สำหรับการรับรองสิทธิ์และการเข้าถึงระบบ
+     - *`Access Token`*: ใช้สำหรับการรับรองสิทธิ์และการเข้าถึงระบบ
 
 #
 
@@ -49,7 +48,7 @@ https://microservices.io/patterns/index.html
      - *Domain-specific*: การสื่อสารที่เหมาะสมกับโดเมนเฉพาะ
 
    - **Reliability (ความน่าเชื่อถือ)**
-     - *Circuit Breaker*: ป้องกันการเรียกใช้บริการที่ล้มเหลวซ้ำ ๆ
+     - *`Circuit Breaker`*: ป้องกันการเรียกใช้บริการที่ล้มเหลวซ้ำ ๆ
 
    - **Transactional Messaging (การจัดการธุรกรรมด้วยการส่งข้อความ)**
      - *Transactional Outbox*: จัดการการส่งข้อความให้อยู่ในธุรกรรมฐานข้อมูล
@@ -61,14 +60,14 @@ https://microservices.io/patterns/index.html
 ### **4. Infrastructure Patterns (รูปแบบของโครงสร้างพื้นฐาน)**
    - **Deployment (การปรับใช้บริการ)**
      - *Multiple Services per Host*: รันหลายบริการบนเครื่องเดียวกัน
-     - *Single Service per Host*: หนึ่งโฮสต์ต่อหนึ่งบริการ
-     - *Service-per-Container*: บริการแต่ละตัวทำงานในคอนเทนเนอร์ของตัวเอง
+     - *`Single Service per Host`*: หนึ่งโฮสต์ต่อหนึ่งบริการ
+     - *`Service-per-Container`*: บริการแต่ละตัวทำงานในคอนเทนเนอร์ของตัวเอง
      - *Service-per-VM*: บริการแต่ละตัวทำงานใน Virtual Machine ของตัวเอง
      - *Serverless deployment*: ใช้แพลตฟอร์มที่ไม่มีเซิร์ฟเวอร์
      - *Service mesh*: เครือข่ายบริการที่ช่วยจัดการการสื่อสารระหว่างไมโครเซอร์วิส
 
    - **Discovery (การค้นหาบริการ)**
-     - *Client-side discovery*: ไคลเอนต์ค้นหาบริการโดยตรงจากรีจิสทรี
+     - *`Client-side discovery`*: ไคลเอนต์ค้นหาบริการโดยตรงจากรีจิสทรี
      - *Server-side discovery*: ตัวจัดการกลางช่วยไคลเอนต์ค้นหาบริการ
      - *Service registry*: ฐานข้อมูลกลางสำหรับเก็บรายการบริการ
      - *3rd party registration*: การลงทะเบียนบริการผ่านแพลตฟอร์มของบุคคลที่สาม
@@ -78,22 +77,22 @@ https://microservices.io/patterns/index.html
 ### **5. Observability (การตรวจสอบและเฝ้าระวังระบบ)**
    - *Audit logging*: บันทึกกิจกรรมในระบบ
    - *Distributed tracing*: ติดตามการทำงานของคำขอที่ไหลผ่านหลายบริการ
-   - *Health check API*: ตรวจสอบสถานะของบริการ
-   - *Exception tracking*: ติดตามข้อผิดพลาดในระบบ
-   - *Log aggregation*: รวมบันทึกจากหลายแหล่งเพื่อวิเคราะห์ข้อมูล
+   - *`Health check API`*: ตรวจสอบสถานะของบริการ
+   - *`Exception tracking`*: ติดตามข้อผิดพลาดในระบบ
+   - *`Log aggregation`*: รวมบันทึกจากหลายแหล่งเพื่อวิเคราะห์ข้อมูล
    - *Log deployments and changes*: ตรวจสอบการปรับใช้และเปลี่ยนแปลงระบบ
 
 #
 
 ### **6. External API (API สำหรับการเข้าถึงจากภายนอก)**
-   - *API gateway*: จุดศูนย์กลางที่ช่วยจัดการคำขอจากไคลเอนต์ไปยังหลายบริการ
-   - *Backend for frontends (BFF)*: API ที่ออกแบบเฉพาะสำหรับไคลเอนต์แต่ละประเภท (เช่น มือถือ vs เว็บ)
+   - *`API gateway`*: จุดศูนย์กลางที่ช่วยจัดการคำขอจากไคลเอนต์ไปยังหลายบริการ
+   - *`Backend for frontends (BFF)`*: API ที่ออกแบบเฉพาะสำหรับไคลเอนต์แต่ละประเภท (เช่น มือถือ vs เว็บ)
 
 #
 
 ### **7. Testing (การทดสอบ)**
    - *Consumer-driven contract test*: ทดสอบสัญญาการสื่อสารระหว่างบริการ
-   - *Service Component Test*: ทดสอบแต่ละบริการในสภาพแวดล้อมจำลอง
+   - *`Service Component Test`*: ทดสอบแต่ละบริการในสภาพแวดล้อมจำลอง
    - *Client-side UI composition*: รวม UI หลายส่วนจากหลายบริการ
    - *Server-side page fragment composition*: รวม UI หลายส่วนที่ฝั่งเซิร์ฟเวอร์
 
