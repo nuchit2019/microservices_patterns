@@ -5,7 +5,7 @@ https://microservices.io/patterns/index.html
 #
 ภาพนี้แสดง **The Microservice Architecture Pattern Language** ซึ่งเป็นแผนภาพโครงสร้างที่อธิบายแนวทางและรูปแบบต่าง ๆ สำหรับการออกแบบ **สถาปัตยกรรมไมโครเซอร์วิส (Microservices Architecture)** โดยแบ่งออกเป็นหมวดหมู่หลัก ๆ ดังนี้:
 
----
+#
 
 ### **1. Application Patterns (รูปแบบของแอปพลิเคชัน)**
    - **Decomposition (การแบ่งระบบเป็นส่วนย่อย)**
@@ -28,7 +28,7 @@ https://microservices.io/patterns/index.html
      - *Event Sourcing*: จัดเก็บสถานะของข้อมูลโดยใช้เหตุการณ์แทนค่าล่าสุด
      - *Aggregate*: องค์ประกอบที่ช่วยจัดกลุ่มข้อมูลในโดเมนเดียวกัน
 
----
+#
 
 ### **2. Application Infrastructure Patterns (โครงสร้างพื้นฐานของแอปพลิเคชัน)**
    - **Cross-cutting concerns (ความกังวลที่ครอบคลุมทั้งระบบ)**
@@ -40,7 +40,7 @@ https://microservices.io/patterns/index.html
    - **Security (ความปลอดภัย)**
      - *Access Token*: ใช้สำหรับการรับรองสิทธิ์และการเข้าถึงระบบ
 
----
+#
 
 ### **3. Communication Patterns (รูปแบบการสื่อสารระหว่างบริการ)**
    - **Communication Style (รูปแบบการสื่อสาร)**
@@ -56,7 +56,7 @@ https://microservices.io/patterns/index.html
      - *Transaction log tailing*: ใช้บันทึกการเปลี่ยนแปลงในฐานข้อมูลเพื่อตรวจสอบความถูกต้องของธุรกรรม
      - *Polling Publisher*: ตรวจสอบและเผยแพร่ข้อความที่เกี่ยวข้องกับธุรกรรม
 
----
+#
 
 ### **4. Infrastructure Patterns (รูปแบบของโครงสร้างพื้นฐาน)**
    - **Deployment (การปรับใช้บริการ)**
@@ -74,8 +74,7 @@ https://microservices.io/patterns/index.html
      - *3rd party registration*: การลงทะเบียนบริการผ่านแพลตฟอร์มของบุคคลที่สาม
      - *Self registration*: บริการลงทะเบียนตัวเองเข้ากับระบบ
 
----
-
+#
 ### **5. Observability (การตรวจสอบและเฝ้าระวังระบบ)**
    - *Audit logging*: บันทึกกิจกรรมในระบบ
    - *Distributed tracing*: ติดตามการทำงานของคำขอที่ไหลผ่านหลายบริการ
@@ -84,13 +83,13 @@ https://microservices.io/patterns/index.html
    - *Log aggregation*: รวมบันทึกจากหลายแหล่งเพื่อวิเคราะห์ข้อมูล
    - *Log deployments and changes*: ตรวจสอบการปรับใช้และเปลี่ยนแปลงระบบ
 
----
+#
 
 ### **6. External API (API สำหรับการเข้าถึงจากภายนอก)**
    - *API gateway*: จุดศูนย์กลางที่ช่วยจัดการคำขอจากไคลเอนต์ไปยังหลายบริการ
    - *Backend for frontends (BFF)*: API ที่ออกแบบเฉพาะสำหรับไคลเอนต์แต่ละประเภท (เช่น มือถือ vs เว็บ)
 
----
+#
 
 ### **7. Testing (การทดสอบ)**
    - *Consumer-driven contract test*: ทดสอบสัญญาการสื่อสารระหว่างบริการ
@@ -98,7 +97,7 @@ https://microservices.io/patterns/index.html
    - *Client-side UI composition*: รวม UI หลายส่วนจากหลายบริการ
    - *Server-side page fragment composition*: รวม UI หลายส่วนที่ฝั่งเซิร์ฟเวอร์
 
----
+#
 
 ### **สรุป**
 ภาพนี้ให้โครงสร้างของ **Microservices Architecture** โดยแสดงรูปแบบหลัก ๆ ในการออกแบบและปรับใช้ระบบไมโครเซอร์วิส ครอบคลุมตั้งแต่การแบ่งบริการ การสื่อสาร การรักษาความสอดคล้องของข้อมูล การปรับใช้ ไปจนถึงการสังเกตการณ์และการทดสอบ 
