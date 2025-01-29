@@ -13,7 +13,7 @@
    - **Decomposition (การแบ่งระบบเป็นส่วนย่อย)**
      - *Decompose by business capability*: แบ่งแอปพลิเคชันตามความสามารถทางธุรกิจ
      - *Decompose by subdomain*: แบ่งตามโดเมนย่อย (ใช้หลัก DDD - Domain Driven Design)
-     - *Self-contained Service*: บริการที่สามารถทำงานได้ด้วยตนเองโดยไม่ต้องรอผลจากบริการอื่น
+     - *`Self-contained Service`*: บริการที่สามารถทำงานได้ด้วยตนเองโดยไม่ต้องรอผลจากบริการอื่น
      - *`Service per team`*: บริการที่ออกแบบให้ตรงกับโครงสร้างทีม
 
    - **Database Architecture (สถาปัตยกรรมฐานข้อมูล)**
