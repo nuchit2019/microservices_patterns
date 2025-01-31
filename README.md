@@ -1,9 +1,6 @@
-# Microservices Patterns
- 
-![image](https://github.com/user-attachments/assets/3b8ab0e4-bf46-446a-bd70-fa4385cc47c2)
-
-
-
+# Microservices Patterns 
+![image](https://microservices.io/i/MicroservicePatternLanguage.jpg)
+https://microservices.io/patterns/index.html
 #
 ภาพนี้แสดง **The Microservice Architecture Pattern Language** ซึ่งเป็นแผนภาพโครงสร้างที่อธิบายแนวทางและรูปแบบต่าง ๆ สำหรับการออกแบบ **สถาปัตยกรรมไมโครเซอร์วิส (Microservices Architecture)** โดยแบ่งออกเป็นหมวดหมู่หลัก ๆ ดังนี้:
 
